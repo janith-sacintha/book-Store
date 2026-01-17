@@ -5,11 +5,9 @@ import ProductOverviewPage from "./productOverviewPage.jsx";
 import CartPage from "./cart.jsx";
 import CheckoutPage from "./checkoutPage.jsx";
 import HomePage from "../homePage.jsx";
-import ContactUsPage from "../contastUsPage.jsx";
 import AboutUsPage from "../aboutUsPage.jsx";
 import OrdersPage from "./ordersPage.jsx";
 import OrderDetailsPage from "./orderDetailsPage.jsx";
-import ReviewsPage from "./reviewsPage.jsx";
 import NotFoundPage from "../notFoundPage.jsx";
 
 export default function ClientWebPage (){
@@ -20,13 +18,10 @@ export default function ClientWebPage (){
             <Routes path="/">
                 <Route path="/" element={<HomePage/>}/>
                 <Route path="/products" element={<ProductsPage/>}/>
-                <Route path="/products/search/:keyword" element={<ProductsPage/>}/>
                 <Route path="/cart" element={<CartPage/>}/>
                 <Route path="/checkout" element={<CheckoutPage/>}/>
                 <Route path="/overview/:productId" element={<ProductOverviewPage/>}/>
-                <Route path="/reviews" element={<ReviewsPage/>}/>
                 <Route path="/about-us" element={<AboutUsPage/>}/>
-                <Route path="/contact-us" element={<ContactUsPage/>}/>
                 <Route path="/my-orders" element={<OrdersPage/>}/>
                 <Route path="/my-orders/:orderId" element={<OrderDetailsPage />} />
                 <Route path="/*" element={<NotFoundPage/>}/>

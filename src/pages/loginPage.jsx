@@ -30,47 +30,48 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="w-full h-screen flex items-center justify-center bg-gradient-to-br from-purple-500 via-indigo-600 to-blue-700">
-      <div className="w-full max-w-md bg-white/10 backdrop-blur-lg rounded-3xl shadow-2xl p-8 flex flex-col items-center gap-6">
-        <h1 className="text-4xl font-extrabold text-white mb-4">Welcome Back</h1>
-        <p className="text-white/70 text-center mb-6">
-          Please enter your credentials to continue
-        </p>
+    <div className="w-full h-screen flex items-center justify-center bg-gradient-to-br from-orange-400 via-orange-500 to-orange-600">
+      <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-8 flex flex-col gap-6">
+        <div className="text-center">
+          <h1 className="text-3xl font-bold text-orange-600">Welcome Back</h1>
+          <p className="text-gray-500 mt-2">
+            Please enter your credentials to continue
+          </p>
+        </div>
 
-        {/* Email */}
-        <div className="w-full">
-          <label className="block text-white/80 text-sm mb-2">Email</label>
+        <div>
+          <label className="block text-sm text-gray-600 mb-1">Email</label>
           <input
             type="email"
             placeholder="Enter your email"
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full px-4 py-3 rounded-xl border border-white/30 bg-white/20 text-white placeholder-white/50 focus:ring-2 focus:ring-purple-400 outline-none"
+            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-400 focus:outline-none"
           />
         </div>
 
-        {/* Password */}
-        <div className="w-full">
-          <label className="block text-white/80 text-sm mb-2">Password</label>
+        <div>
+          <label className="block text-sm text-gray-600 mb-1">Password</label>
           <input
             type="password"
             placeholder="Enter your password"
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full px-4 py-3 rounded-xl border border-white/30 bg-white/20 text-white placeholder-white/50 focus:ring-2 focus:ring-purple-400 outline-none"
+            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-400 focus:outline-none"
           />
         </div>
 
-        {/* Login Button */}
         <button
           onClick={login}
-          className="cursor-pointer w-full py-3 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded-xl shadow-lg hover:opacity-90 transition"
+          className="w-full cursor-pointer py-3 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition"
         >
           Login
         </button>
 
-        {/* Register link */}
-        <p className="text-white/80 text-sm mt-4">
+        <p className="text-sm text-center text-gray-600">
           Don’t have an account?{" "}
-          <Link to="/register" className="text-purple-300 font-semibold hover:underline">
+          <Link
+            to="/register"
+            className="text-orange-500 font-semibold hover:underline"
+          >
             Sign up
           </Link>
         </p>
