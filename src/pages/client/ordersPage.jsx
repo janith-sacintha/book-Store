@@ -21,7 +21,7 @@ export default function OrdersPage() {
 
   const navigate = useNavigate()
 
-  // ================= STATUS STYLES =================
+
   const statusStyles = {
     delivered: "bg-green-100 text-green-700 ring-1 ring-green-300",
     processing: "bg-amber-100 text-amber-700 ring-1 ring-amber-300 animate-pulse",
@@ -30,7 +30,7 @@ export default function OrdersPage() {
     cancelled: "bg-rose-100 text-rose-700 ring-1 ring-rose-300",
   }
 
-  // ================= FETCH ORDERS =================
+
   useEffect(() => {
     const token = localStorage.getItem("token")
     setLoading(true)
@@ -50,7 +50,7 @@ export default function OrdersPage() {
       .finally(() => setLoading(false))
   }, [page, limit])
 
-  // ================= UI =================
+
   return (
     <div className="w-full min-h-screen flex justify-center bg-gray-50 pt-10">
       {loading ? (
@@ -61,7 +61,7 @@ export default function OrdersPage() {
             My Orders
           </h1>
 
-          {/* NO ORDERS */}
+         
           {orders.length === 0 ? (
             <div className="flex flex-col items-center justify-center text-center py-20">
               <FaShoppingBag className="text-gray-400 text-7xl mb-6" />
@@ -80,7 +80,7 @@ export default function OrdersPage() {
             </div>
           ) : (
             <>
-              {/* ORDERS GRID */}
+            
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {orders.map((order) => (
                   <div
@@ -90,7 +90,7 @@ export default function OrdersPage() {
                     }
                     className="rounded-2xl shadow-md hover:shadow-xl transition duration-200 p-6 cursor-pointer border border-gray-100 bg-white"
                   >
-                    {/* HEADER */}
+                 
                     <div className="flex justify-between items-center mb-4">
                       <h2 className="text-lg font-bold text-gray-800">
                         Order #{order.orderId}
@@ -106,9 +106,9 @@ export default function OrdersPage() {
                       </span>
                     </div>
 
-                    {/* ITEMS PREVIEW */}
+               
                     <div className="flex gap-4 mb-4">
-                      {order.items.slice(0, 3).map((item, i) => (
+                      {order.items.slice(0,  3).map((item, i) => (
                         <img
                           key={i}
                           src={item.image}
@@ -123,7 +123,7 @@ export default function OrdersPage() {
                       )}
                     </div>
 
-                    {/* ORDER INFO */}
+          
                     <div className="text-sm text-gray-600 space-y-2">
                       <p className="flex items-center gap-2">
                         <FaBoxOpen className="text-indigo-500" />

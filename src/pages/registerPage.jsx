@@ -11,6 +11,11 @@ export default function RegisterPage() {
   const navigate = useNavigate();
 
   async function register() {
+    if (!firstName || !lastName || !email || !password) {
+      toast.error("All fields are required");
+      return;
+    }
+
     try {
       await axios.post(
         `${import.meta.env.VITE_BACKEND_URL}/api/users/`,
@@ -35,21 +40,23 @@ export default function RegisterPage() {
       <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-8 flex flex-col gap-5">
         <div className="text-center">
           <h1 className="text-3xl font-bold text-orange-600">Create Account</h1>
-          <p className="text-gray-500 mt-2">
-            Sign up to get started
-          </p>
+          <p className="text-gray-500 mt-2">Sign up to get started</p>
         </div>
 
         <div className="grid grid-cols-2 gap-3">
           <input
             type="text"
             placeholder="First name"
+            required
+            value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
             className="px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-400 focus:outline-none"
           />
           <input
             type="text"
             placeholder="Last name"
+            required
+            value={lastName}
             onChange={(e) => setLastName(e.target.value)}
             className="px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-400 focus:outline-none"
           />
@@ -58,6 +65,8 @@ export default function RegisterPage() {
         <input
           type="email"
           placeholder="Email address"
+          required
+          value={email}
           onChange={(e) => setEmail(e.target.value)}
           className="px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-400 focus:outline-none"
         />
@@ -65,6 +74,8 @@ export default function RegisterPage() {
         <input
           type="password"
           placeholder="Password"
+          required
+          value={password}
           onChange={(e) => setPassword(e.target.value)}
           className="px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-400 focus:outline-none"
         />

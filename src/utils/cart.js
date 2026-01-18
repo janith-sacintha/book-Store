@@ -27,7 +27,7 @@ export function getCart(){
 export function addToCart(product , qty){
     const cart = getCart()
 
-    //Check existing products - same as map --> findIndex
+    //Check existing products - same as map --> findIndex...
     const existingProductIndex = cart.findIndex((item)=>{
         return item.productId == product.productId
     })

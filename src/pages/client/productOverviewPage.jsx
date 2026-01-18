@@ -6,7 +6,6 @@ import Loader from "../../components/loader";
 import ImageSlider from "../../components/imageSlider";
 import { addToCart } from "../../utils/cart";
 import { AlertTriangle, MessageSquare } from "lucide-react";
-import { FaStar } from "react-icons/fa";
 
 export default function ProductOverviewPage() {
   const params = useParams();

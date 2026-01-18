@@ -82,7 +82,7 @@ export default function CheckoutPage() {
         Checkout
       </h1>
 
-      {/* Cart Items */}
+  
       <div className="flex flex-col gap-6 w-full max-w-4xl">
         {cart.map((item, index) => (
           <div
@@ -162,7 +162,7 @@ export default function CheckoutPage() {
         ))}
       </div>
 
-      {/* Customer Details */}
+
       <div className="w-full max-w-4xl bg-white shadow-xl rounded-2xl border border-gray-100 p-8 space-y-5">
         <h2 className="text-xl font-bold text-gray-800">Customer Details</h2>
         <input

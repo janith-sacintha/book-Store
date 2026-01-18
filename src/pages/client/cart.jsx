@@ -122,7 +122,7 @@ export default function CartPage() {
                 navigate("/products")
               }}
             >
-              Continue Shopping
+              Continue Shoppings
             </button>
 
             <button

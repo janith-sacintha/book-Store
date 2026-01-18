@@ -11,8 +11,8 @@ export default function AboutUsPage() {
             About Us
           </h1>
           <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-            Learn more about itoya and what makes us your trusted neighbourhood
-            store.
+            Discover our love for books and what makes our bookstore a favorite
+            place for readers.
           </p>
         </header>
 
@@ -22,11 +22,10 @@ export default function AboutUsPage() {
               Who We Are
             </h2>
             <p className="text-gray-700 leading-relaxed">
-              itoya is a locally-owned shop in Colombo, dedicated to serving
-              students, professionals, and families with a wide variety of
-              products and services. From everyday stationery and office
-              supplies to vibrant toys, decorating items, and plastic essentials,
-              we are committed to making your shopping simple and enjoyable.
+              We are a locally-owned bookstore dedicated to book lovers of all
+              ages. From students and educators to casual readers and collectors,
+              our store offers a welcoming space where stories, knowledge, and
+              imagination come together.
             </p>
           </div>
 
@@ -35,11 +34,11 @@ export default function AboutUsPage() {
               What We Offer
             </h2>
             <ul className="list-disc pl-6 space-y-2 text-gray-700">
-              <li>Stationery, office supplies, and art materials</li>
-              <li>Fast and reliable photocopy & colour printing services</li>
-              <li>Plastic items for storage, organization, and daily use</li>
-              <li>Educational and fun toys for all ages</li>
-              <li>Decorating items for events, parties, and celebrations</li>
+              <li>Fiction, non-fiction, and children’s books</li>
+              <li>Educational and academic textbooks</li>
+              <li>Novels, biographies, and self-development books</li>
+              <li>Stationery and reading accessories</li>
+              <li>Special orders for rare and imported books</li>
             </ul>
           </div>
 
@@ -48,10 +47,9 @@ export default function AboutUsPage() {
               Our Mission
             </h2>
             <p className="text-gray-700 leading-relaxed">
-              Our mission is to provide affordable, high-quality products and
-              quick services under one roof. We believe in supporting our
-              community by offering friendly service and reliable solutions
-              every day.
+              Our mission is to inspire a love for reading by providing
+              high-quality books at affordable prices. We aim to support learning,
+              creativity, and personal growth within our community.
             </p>
           </div>
         </section>
@@ -74,7 +72,7 @@ export default function AboutUsPage() {
             </p>
             <p className="flex justify-center items-center gap-3">
               <FiMail className="text-xl text-indigo-600" />{" "}
-              itoyaparakatawella@gmail.com
+              bookstore@gmail.com
             </p>
           </div>
         </section>
